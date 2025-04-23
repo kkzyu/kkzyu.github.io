@@ -1,0 +1,344 @@
+{
+  "name": "陈景颖",
+  "alias": "Alanniido Jingying Chen",
+  "greeting": "Hello",
+  "avatarSrc": "/images/alanni.jpg",
+  "contacts": [
+    {
+      "type": "email",
+      "url": "mailto:3220101920@zju.edu.cn",
+      "iconSrc": "/images/email.svg"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/kkzyu",
+      "iconSrc": "/images/github.svg"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/IdoAlanni",
+      "iconSrc": "/images/twitter.svg"
+    }
+  ],
+  "status": "26届本科生",
+  "school": "浙江大学管理学院",
+  "schoolLink": "http://www.som.zju.edu.cn/",
+  "major": "信息管理与信息系统",
+  "sidebar": {
+    "quickNav": [
+      {
+        "href": "#summary",
+        "text": "主修课程"
+      },
+      {
+        "href": "#publications",
+        "text": "作品速览",
+        "children": [
+          {
+            "href": "#optimizing",
+            "text": "运筹学方向"
+          },
+          {
+            "href": "#deep-learning",
+            "text": "深度学习方向"
+          },
+          {
+            "href": "#literature",
+            "text": "文学作品"
+          },
+          {
+            "href": "#translation",
+            "text": "翻译作品"
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "majorCourses": [
+      "数据结构",
+      "数据库系统与应用",
+      "计算机网络",
+      "运筹学等"
+    ],
+    "currentGoals": [
+      "学习web开发技术",
+      "准备跨考浙江大学-计算机科学与技术"
+    ],
+    "interestStatement": "如果您对我的研究感兴趣，欢迎联系我！"
+  },
+  "featuredPapers": [
+    {
+      "id": "20250228",
+      "title": "20250228: Optimizing Fresh Warehouse Networks Using MIP and SARIMA Forecasting",
+      "keywords": "keywords: Mixed-Integer Programming · Seasonal Autoregressive Integrated Moving Average · Empirical Distribution Function",
+      "imageSrc": "/images/20250228.png",
+      "pdfLink": "/papers/20250228.pdf"
+    },
+    {
+      "id": "20250128",
+      "title": "20250128: Optimizing Baltimore's Transportation Network",
+      "keywords": "keywords: Baltimore Transportation Network · Grid-Based Analysis · Dijkstra Algorithm · K-Means Clustering",
+      "imageSrc": "/images/20250128.png",
+      "pdfLink": "/papers/20250128.pdf"
+    },
+    {
+      "id": "20240824",
+      "title": "20240824: 基于变步长搜索算法的板凳龙表演问题研究",
+      "keywords": "关键词: 板凳龙 阿基米德螺线 极坐标 变步长搜索算法 几何分析 仿真建模",
+      "imageSrc": "/images/20240824.png",
+      "pdfLink": "/papers/20240824.pdf"
+    }
+  ],
+  "publications": [
+    {
+      "topicId": "optimizing",
+      "topicName": "运筹学方向",
+      "items": [
+        {
+          "id": "20250228",
+          "title": "Optimizing Fresh Warehouse Networks Using MIP and SARIMA Forecasting",
+          "authors": [
+            "Jingying Chen",
+            "Mingyu Qi",
+            "Yulong Yang"
+          ],
+          "description": "Mixed-Integer Programming · Seasonal Autoregressive Integrated Moving Average · Empirical Distribution Function",
+          "thumbnailSrc": "/images/20250228.png",
+          "pdfLink": "/papers/20250228.pdf",
+          "githubLink": "https://github.com/kkzyu/20250228.git"
+        },
+        {
+          "id": "20250128",
+          "title": "Optimizing Baltimore's Transportation Network",
+          "authors": [
+            "Jingying Chen",
+            "Mingyu Qi",
+            "Yulong Yang"
+          ],
+          "description": "Baltimore Transportation Network · Grid-Based Analysis · Dijkstra Algorithm · K-Means Clustering",
+          "thumbnailSrc": "/images/20250128.png",
+          "pdfLink": "/papers/20250128.pdf"
+        },
+        {
+          "id": "20240824",
+          "title": "基于变步长搜索算法的板凳龙表演问题研究",
+          "authors": [
+            "陈景颖",
+            "戚铭宇",
+            "杨云龙"
+          ],
+          "keywords": "板凳龙 阿基米德螺线 极坐标 变步长搜索算法 几何分析 仿真建模",
+          "thumbnailSrc": "/images/20240824.png",
+          "pdfLink": "/papers/20240824.pdf",
+          "githubLink": "https://github.com/kkzyu/20240824.git"
+        },
+        {
+          "id": "20240615",
+          "title": "基于模拟退火算法的无人机协同区域搜索问题研究",
+          "authors": [
+            "陈景颖",
+            "戚铭宇",
+            "杨云龙"
+          ],
+          "keywords": "无人机区域协同搜索 优化模型 模拟退火算法 栅格法",
+          "thumbnailSrc": "/images/20240615.png",
+          "pdfLink": "/papers/20240615.pdf"
+        },
+        {
+          "id": "20240501",
+          "title": "基于交通需求的路径规划和需求分配研究",
+          "authors": [
+            "陈景颖",
+            "戚铭宇",
+            "张承"
+          ],
+          "keywords": "动态规划 图论 多目标复杂规划 蒙特卡洛模拟 模拟退火算法",
+          "thumbnailSrc": "/images/20240501.png",
+          "pdfLink": "/papers/20240501.pdf"
+        }
+      ]
+    },
+    {
+      "topicId": "deep-learning",
+      "topicName": "深度学习方向",
+      "items": [
+        {
+          "id": "20241223",
+          "title": "基于ResEmoteNet的FER2013人脸表情识别",
+          "authors": [
+            "陈景颖",
+            "许洁盈",
+            "罗立余"
+          ],
+          "description": "Convolutional Neural Network · Squeeze-and-Excitation Network · Residual Network · Adaptive Average Pooling",
+          "thumbnailSrc": "/images/20241223.png",
+          "pptxLink": "/papers/20241223.pptx",
+          "githubLink": "https://github.com/alanniido/Face-detect.git"
+        }
+      ]
+    },
+    {
+      "topicId": "literature",
+      "topicName": "文学作品",
+      "items": [
+        {
+          "title": "道道名名",
+          "excerpt": "高中时候语文课上，在那句“漠漠水田飞白鹭”后我备注道：“ 雾湿田畦，上下天光皆隐于白色幻境，而这空濛之地却蓦地突出一只比太虚更趋于无的鹭，宛如游动的衣袂扑进他的眼。”那时候并没有了解什么老庄思想，却认为用“空濛”、“太虚”等词来形容王维诗的意境再合适不过……",
+          "thumbnailSrc": "/images/author.jpg",
+          "docLink": "/papers/道道名名.docx"
+        },
+        {
+          "title": "偌大置我于万物消失殆尽的梦魇世界",
+          "excerpt": "说实话很不想从邓坊离开的。比起后来去旅游见到的那个什么世外桃源，我在老家的日子才更像武陵生活。前些天三娇姐姐刚去塘里面采了莲蓬回来，每天下午就在敞风口的那块空地上剥莲子，我妈和钟老师负责把莲子从洞里面挖出来，晒干，剥皮，再去心，我和妹妹就负责看……",
+          "thumbnailSrc": "/images/author.jpg",
+          "docLink": "/papers/偌大置我于万物消失殆尽的梦魇世界.docx"
+        },
+        {
+          "title": "全蚀",
+          "excerpt": "我梦见patali把我的心扔进粉色大海里。 海洋是母亲温暖的子宫，我蜷缩进最深梦境处，趁羊水涨潮时。我像一只寄生小兽紧紧吸附在岸边石头上，蚕食着你的一切。我有时候看见盛大的鲸落，腐蚀的血肉间开满鲜花，下起来流星雨。于是你梦到在陨落的星体上建立起新宇宙，被可怜的幸福包围住轻易激动起来……",
+          "thumbnailSrc": "/images/author.jpg",
+          "docLink": "/papers/全蚀.docx"
+        },
+        {
+          "title": "日出",
+          "excerpt": "日出于东山之上。 山，是天边垂下的一道绿色瀑布，倏地便染了星点大小的红，像和在春风中的山茶上了屏风。你便改成奔跑着去捉住它，路便成了一条小溪，溪边的奇石朝你撞过来，此时最好拜它一拜，未光狂风时它是屹然伫立在你面前的薄伽梵：我们已经如此尊贵，还不能让你放弃做那个高傲的人吗？沉入你心之海底的低吼那便是，嶙峋竟如呲牙的龙……",
+          "thumbnailSrc": "/images/author.jpg",
+          "docLink": "/papers/日出.docx"
+        },
+        {
+          "title": "看雨",
+          "excerpt": "这样大的雨，实在有点害怕。遇到这种天气，最好还是乖乖待在家里吧，虽然用铁栅栏围住的家里。 银针般细密的雨齐刷刷往一个地方扎去，究竟哪里会是雨的汇集地--teardrops'swimming pool就这样什么难过委屈的泪，为赋新词强说愁的泪，对抗命运的泪啦都汇集在这里了。萧萧……",
+          "thumbnailSrc": "/images/author.jpg",
+          "docLink": "/papers/看雨.docx"
+        }
+      ]
+    },
+    {
+      "topicId": "translation",
+      "topicName": "翻译作品",
+      "items": [
+        {
+          "title": "夜色温柔",
+          "excerpt": "沿着法国里维埃拉优美的海岸线走去，在马赛和意大利国界线之间大约半程之地傲立着一座庞大的玫瑰色旅店。一排棕榈树如恭敬的仆从齐立于旅舍之前，遮住它潮红的正面，而更前之处则是一片低矮的跃金海滩。最近它已然成为知名人士和时尚宠儿们的度假胜地，让人快要忘记十年前在它那些英国顾客四月出发到北边去后，这里几乎变成了一片荒地……",
+          "thumbnailSrc": "/images/author.jpg",
+          "docLink": "/papers/夜色温柔.docx"
+        }
+      ]
+    }
+  ],
+  "cv": {
+    "cn": {
+      "personalInfo": {
+        "name": "陈景颖",
+        "contact": "(86)193-5757-1847 | 邮箱：19357571847@163.com"
+      },
+      "sections": {
+        "education": {
+          "title": "教育背景",
+          "items": [
+            "浙江大学 信息管理与信息系统专业 2022.09-2026.06",
+            "修读课程：数据结构;运筹学;分布式文件系统与数据库技术;Web 程序设计；管理信息系统;会计学；计量经济学",
+            "英语水平：CET-6"
+          ]
+        },
+        "research": {
+          "title": "科研经历",
+          "items": [
+            {
+              "title": "Optimizing Fresh Warehouse Networks Using MIP and SARIMA Forecasting 2024.08-2024.09",
+              "content": "以'基于需求量数据的生鲜电商仓网布局与需求量预测模型'为主题，建立混合整数规划求解出最优仓储布设方案和物流运输方案，运用 SARIMA 等模型对订单量进行预测。论文已见刊于 Lecture Notes in Computer Science （ISBN 978-981-96-1194-2）。"
+            },
+            {
+              "title": "基于人工智能的细胞图景与癌症研究 2024.09-至今",
+              "content": "本研究采用多组学整合与 AI 技术解析癌症分子机制，推动个体化治疗。本人负责基于深度学习的细胞切片分割及自动化标注，为精准医学提供关键数据支持。"
+            },
+            {
+              "title": "基于 AIGC 的社交媒体生成内容对消费者决策影响研究 2024.04-至今",
+              "content": "以'AI 生成内容对消费者决策的影响'为主题，融合多学科知识展开研究。负责模型投放、数据分析和实验设计部分工作。通过优先搜索策略爬取新的页面，实时更新数据库。对数据库中数据进行数据预处理、分析和可视化。最后设计三段实验，分别测量消费者的支付意愿。"
+            }
+          ]
+        },
+        "competitions": {
+          "title": "比赛经历",
+          "items": [
+            "第四届'火花杯'数学建模精英联赛 特等奖 2024.08.08-2024.08.12",
+            "2024 年全国大学生数学建模竞赛 省二等奖 2024.09.05-2024.09.08",
+            "第二十一届五一数学建模比赛 省二等奖 2024.05.01-2024.05.04",
+            "浙江大学第二十二届大学生数学建模竞赛 校一等奖 2024.05.15-2024.05.23"
+          ]
+        },
+        "workExperience": {
+          "title": "学生工作经历",
+          "items": [
+            "浙江大学管理学院本科生事务指导中心 部长 2023.09 -2024.06",
+            "浙江大学校学生会权益服务中心 项目部干事 2022.09 -2023.06"
+          ]
+        },
+        "otherInfo": {
+          "title": "其他信息",
+          "items": [
+            "计算机能力：SQL、Python、R",
+            "自我评价：本人对新事物具有强烈的好奇心，善于发现问题，提出解决办法；对数据敏感，对数据类工作有高度热情；有较强的自学能力，对大数据应用场景有一定认识；在课程中多次担任组长，具有较强的协调沟通能力。"
+          ]
+        }
+      }
+    },
+    "en": {
+      "personalInfo": {
+        "name": "Chen Jingying",
+        "contact": "(86)193-5757-1847 | Email: 19357571847@163.com"
+      },
+      "sections": {
+        "education": {
+          "title": "Education",
+          "items": [
+            "Zhejiang University, Information Management & Information Systems, 09/2022-06/2026",
+            "Courses: Data Structures; Operations Research; Distributed File Systems & Database Technology; Web Programming; Management Information Systems; Accounting; Econometrics",
+            "English Proficiency: CET-6"
+          ]
+        },
+        "research": {
+          "title": "Research Experience",
+          "items": [
+            {
+              "title": "Optimizing Fresh Warehouse Networks Using MIP and SARIMA Forecasting 08/2024-09/2024",
+              "content": "Developed an optimal warehouse network layout and logistics solution using Mixed Integer Programming (MIP) and SARIMA forecasting models for fresh e-commerce demand prediction. Published in Lecture Notes in Computer Science (ISBN 978-981-96-1194-2)."
+            },
+            {
+              "title": "AI-based Cellular Landscape and Cancer Research 09/2024-Present",
+              "content": "Employing multi-omics integration and AI technologies to decipher cancer molecular mechanisms for personalized therapy. Responsible for deep learning-based cell slice segmentation and automated annotation."
+            },
+            {
+              "title": "Impact of AIGC on Consumer Decision Making 04/2024-Present",
+              "content": "Investigating how AI-generated content influences consumer decisions. Responsibilities include model deployment, data analysis, and experimental design. Implemented priority-based web crawling for real-time database updates, followed by data preprocessing, analysis, and visualization."
+            }
+          ]
+        },
+        "competitions": {
+          "title": "Competitions",
+          "items": [
+            "4th 'Spark Cup' Mathematical Modeling Elite League - Grand Prize (08/2024)",
+            "2024 National Undergraduate Mathematical Contest in Modeling - Provincial Second Prize (09/2024)",
+            "21st May Day Mathematical Modeling Contest - Provincial Second Prize (05/2024)",
+            "22nd ZJU Mathematical Modeling Contest - University First Prize (05/2024)"
+          ]
+        },
+        "workExperience": {
+          "title": "Leadership Experience",
+          "items": [
+            "Director, Undergraduate Affairs Guidance Center, ZJU School of Management (09/2023-06/2024) ",
+            "Project Staff, Student Union Rights Service Center (09/2022-06/2023)"
+          ]
+        },
+        "otherInfo": {
+          "title": "Additional Information",
+          "items": [
+            "Technical Skills: SQL, Python, R",
+            "Self-evaluation: Highly curious with strong problem-solving skills; Data-sensitive with passion for data-related work; Fast learner with understanding of big data applications; Demonstrated leadership and communication skills through multiple group projects."
+          ]
+        }
+      }
+    }
+  }
+}

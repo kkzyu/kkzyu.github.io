@@ -1,0 +1,195 @@
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.highlight {
+    color: #770e1c;
+    font-size: 17px;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+    color: #696666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e1734a;
+}
+
+.content {
+    margin-bottom: 100px;
+}
+
+#header {
+    border-bottom: 2px solid #e0e0e0;
+    /* padding: 15px 0; */
+    margin: 0px 100px 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #e1734a;
+}
+
+
+.about {
+    display: flex;
+    gap: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+    /* min-width: 400px; */
+}
+
+.portrait {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contacts {
+    margin-top: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.icon:hover {
+    opacity: 0.7;
+}
+
+.info {
+    /* flex: 0 0 auto; */
+    text-align: right;
+    padding-left: 30px;
+    margin-left: auto;
+    margin-top: 35px;
+}
+
+
+/* CV specific styles from cvstyle.css */
+.background {
+    background-color: #fff;
+    padding: 30px; /* More padding for CV sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Slightly stronger shadow */
+    margin: 10px 20px 10px 20px;
+}
+
+.section {
+    margin-bottom: 30px; /* Space between CV sections */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Separator line */
+}
+.section:last-child {
+    margin-bottom: 0;
+    border-bottom: none; /* No line after the last section */
+    padding-bottom: 0;
+}
+
+.section h2 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 20px;
+    border-left: 4px solid #e1734a; /* Accent line */
+    padding-left: 10px;
+}
+
+.experience {
+    margin-bottom: 20px; /* Space between entries within a section */
+}
+.experience:last-child {
+    margin-bottom: 0;
+}
+
+.experience h3 {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.experience p { /* Details line: Date | Role | Responsibility */
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.experience h4 { /* Description */
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+    font-weight: normal; /* Descriptions are usually not headings */
+    text-align: justify; /* Justify text for cleaner look */
+}
+
+/* Ensure FontAwesome icons are displayed if classes like icon-xxx are used */
+/* [class^="icon-"], [class*=" icon-"] { ... } */ /* Basic setup for font icons */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #770e1c;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #770e1c;
+}
+
+/* 当页面滚动到顶部时隐藏按钮 */
+#top:target~#back-to-top {
+    display: none;
+}

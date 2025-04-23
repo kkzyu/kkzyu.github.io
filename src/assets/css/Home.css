@@ -1,0 +1,504 @@
+.hidden {
+    /* Example: style to hide sidebar if toggleSidebar uses class */
+    transform: translateX(-100%);
+    /* Adjust based on your actual CSS for hiding */
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#sidebar {
+    /* Ensure sidebar has a base style for transition */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Add styles from font-awesome if needed and not globally included */
+@import '@/assets/css/font-awesome.min.css';
+
+/* Include base styles from style.css if not global */
+/* @import '@/assets/css/style.css'; */
+
+/* --- From original style.css relevant parts --- */
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.highlight {
+    color: #770e1c;
+    font-size: 17px;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+    color: #696666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e1734a;
+}
+
+.content {
+    margin-bottom: 100px;
+}
+
+#header {
+    border-bottom: 2px solid #e0e0e0;
+    /* padding: 15px 0; */
+    margin: 0px 100px 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #e1734a;
+}
+
+
+.about {
+    display: flex;
+    gap: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+    /* min-width: 400px; */
+}
+
+.portrait {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contacts {
+    margin-top: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.icon:hover {
+    opacity: 0.7;
+}
+
+.info {
+    /* flex: 0 0 auto; */
+    text-align: right;
+    padding-left: 30px;
+    margin-left: auto;
+    margin-top: 35px;
+}
+
+
+.white-background {
+    background-color: #fff;
+    padding: 20px 20px 0px 20px;
+    border-radius: 8px;
+    /* Optional */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional */
+    display: flex;
+    /* Layout sidebar and main content */
+    gap: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#sidebar {
+    width: 250px;
+    /* Adjust as needed */
+    flex-shrink: 0;
+    /* Prevent sidebar from shrinking */
+    position: relative;
+    /* For close button positioning */
+    border-right: 1px solid #eee;
+    padding-right: 15px;
+}
+
+
+
+#sidebar .nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar .nav-list li {
+    margin-bottom: 8px;
+}
+
+#sidebar .nav-list a.nav-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    /* Make link clickable area larger */
+    padding: 2px 0;
+}
+
+#sidebar .nav-list a.nav-link.active {
+    /* Style for active scrollspy link */
+    color: #e86363a6;
+    font-weight: bold;
+}
+
+#sidebar .nav-list ul {
+    /* Nested list style */
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+#sidebar .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+#sidebar .close-btn:hover {
+    color: #333;
+}
+
+.word-cloud svg {
+    display: block;
+    /* Prevent extra space below SVG */
+    margin: 0 auto;
+    /* Center if needed */
+}
+
+.word-cloud text:hover {
+    /* Style from JS included here for clarity */
+    fill: #e1734a !important;
+    /* Force highlight color */
+    cursor: pointer;
+}
+
+
+.main-content {
+    flex-grow: 1;
+    /* Allow main content to take remaining space */
+}
+
+.summary {
+    margin-bottom: 0px;
+    line-height: 1.6;
+}
+
+.summary p {
+    margin-bottom: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.papers {
+    margin-bottom: 0px;
+}
+
+.themes {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+    gap: 20px;
+    /* Space between paper items */
+}
+
+.demo--justify-space-evenly {
+    /* Assuming this class provides the spacing */
+    justify-content: space-evenly;
+}
+
+.theme.item {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    /* Adjust width for 3 columns with gap */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.theme.item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme.item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.theme.item img {
+    width: 100%;
+    height: 150px;
+    /* Adjust height */
+    object-fit: cover;
+    display: block;
+}
+
+.theme.item .text {
+    padding: 10px;
+}
+
+.theme.item .name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.theme.item .desc {
+    font-size: 0.8em;
+    color: #666;
+    line-height: 1.4;
+}
+
+
+.publications {
+    margin-top: 20px;
+}
+
+.publications h3 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.publications .topic-1 {
+    margin-bottom: 30px;
+}
+
+.publications .topic-1>p.highlight.bold {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #e1734a;
+    /* Highlight topic title */
+}
+
+.publication {
+    display: flex;
+    gap: 15px;
+    /* Space between thumbnail and info */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    /* Separator */
+    padding-bottom: 20px;
+}
+
+.publication:last-child {
+    border-bottom: none;
+    /* Remove border for the last item in a topic */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.publication a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    /* Ensure link wrapper works correctly */
+    width: 100%;
+}
+
+.publication .thumbnail img {
+    width: 180px;
+    /* Adjust thumbnail size */
+    height: 160px;
+    /* Maintain aspect ratio */
+    max-height: 120px;
+    /* Optional max height */
+    object-fit: cover;
+    /* Crop if needed */
+    border: 1px solid #f0f0f0;
+}
+
+.publication .information {
+    flex-grow: 1;
+}
+
+.publication .information .bold.highlight {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    display: block;
+    /* Ensure it takes full width */
+}
+
+.publication .authors {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.publication .venue {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.publication .download-option {
+    display: flex;
+    gap: 15px;
+    /* Space between icons */
+    align-items: center;
+}
+
+.publication .download-option a {
+    display: inline-block;
+    /* Reset display for icon links */
+    width: auto;
+}
+
+.publication .download-option .item {
+    font-size: 1.5em;
+    /* Adjust icon size via font-size for font icons */
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+.publication .download-option a:hover .item {
+    color: #e1734a;
+    /* Highlight color on hover */
+}
+
+/* Add styles for icon classes (icon-file, icon-github) if using FontAwesome or similar */
+/* Example placeholder if using pseudo-elements */
+.icon-file::before {
+    content: '📄';
+    font-size: 0.8em;
+    /* Adjust icon size via font-size for font icons */
+
+}
+
+.icon-github::before {
+    content: '💻';
+    font-size: 0.8em;
+    /* Adjust icon size via font-size for font icons */
+}
+
+
+/* Common styles */
+.bold {
+    font-weight: bold;
+}
+
+.highlight {
+    color: #e1734a;
+    /* Your highlight color */
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: none;
+    /* Initially hidden, controlled by scroll */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#back-to-top:hover {
+    opacity: 1;
+}
+
+#back-to-top .bold {
+    font-size: 1.2em;
+}
+
+
+/* Responsive Adjustments (Example) */
+@media (max-width: 768px) {
+
+    .about,
+    .white-background {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-right: 0;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        /* Add styles for mobile sidebar toggle if needed */
+    }
+
+    .theme.item {
+        width: calc(50% - 10px);
+        /* 2 columns on smaller screens */
+    }
+
+    .publication {
+        flex-direction: column;
+        /* Stack thumbnail and info */
+    }
+
+    .publication .thumbnail img {
+        width: 100%;
+        /* Full width thumbnail */
+        max-height: 180px;
+        /* Adjust max height */
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme.item {
+        width: 100%;
+        /* 1 column on very small screens */
+    }
+}
+
+/* Ensure D3/FontAwesome CDN links are in public/index.html if used */

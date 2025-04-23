@@ -1,0 +1,51 @@
+{
+    "name": "陈景颖",
+    "alias": "Alanniido Jingying Chen",
+    "greeting": "Hello",
+    "avatarSrc": "/images/alanni.jpg",
+    "contacts": [
+      { "type": "email", "url": "mailto:3220101920@zju.edu.cn", "iconSrc": "/images/email.svg" },
+      { "type": "github", "url": "https://github.com/kkzyu", "iconSrc": "/images/github.svg" },
+      { "type": "twitter", "url": "https://twitter.com/IdoAlanni", "iconSrc": "/images/twitter.svg" }
+    ],
+    "status": "26届本科生",
+    "school": "浙江大学管理学院",
+    "schoolLink": "http://www.som.zju.edu.cn/",
+    "major": "信息管理与信息系统",
+    "sidebar": {
+      "quickNav": [
+        { "href": "#summary", "text": "主修课程" },
+        {
+          "href": "#publications",
+          "text": "作品速览",
+          "children": [
+            { "href": "#optimizing", "text": "运筹学方向" },
+            { "href": "#deep-learning", "text": "深度学习方向" },
+            { "href": "#literature", "text": "文学作品" },
+            { "href": "#translation", "text": "翻译作品" }
+          ]
+        }
+      ]
+    },
+    "summary": {
+    "majorCourses": ["数据结构", "数据库系统与应用", "计算机网络", "运筹学等"],
+    "currentGoals": ["学习web开发技术", "准备跨考浙江大学-计算机科学与技术"],
+    "interestStatement": "如果您对我的研究感兴趣，欢迎联系我！"
+  },
+    "projects": [
+      {
+        "id": "wordcloud-generator",
+        "title": "【词云图生成器】",
+        "imageSrc": "/images/wordcloud.png",
+        "link": "/WordCloud" 
+      },
+      {
+        "id": "greedy-snake",
+        "title": "【用JS写的贪吃蛇小游戏】",
+        "imageSrc": "/images/greedysnake.png",
+        "link": "/Greedysnake" 
+      }
+    ]
+  }
+  
+  
