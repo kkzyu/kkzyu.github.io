@@ -17,6 +17,7 @@
           <router-link to="/" class="nav-item">IDOweb</router-link>
           <router-link to="/cv" class="nav-item">CV</router-link>
           <router-link to="/programs" class="nav-item">Programs</router-link>
+          <router-link to="/blog">Blog</router-link>
         </nav>
       </div>
 
@@ -76,6 +77,7 @@ html, body {
   font-family: 'Comic Sans MS', cursive, sans-serif; /* Or your preferred font */
   background: linear-gradient(135deg, #ffe6f0 0%, #e6f9ff 100%);
   min-height: 100vh;
+  font-size: 18px;
   padding: 0; /* Remove body padding if #app handles it */
   margin: 0;
   color: #6a4a7a;

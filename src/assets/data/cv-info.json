@@ -231,6 +231,7 @@
     "cn": {
       "personalInfo": {
         "name": "陈景颖",
+        "avatar":"/images/alanni.jpg",
         "contact": "(86)193-5757-1847 | 邮箱：19357571847@163.com"
       },
       "sections": {
@@ -287,6 +288,7 @@
     "en": {
       "personalInfo": {
         "name": "Chen Jingying",
+        "avatar":"/images/alanni.jpg",
         "contact": "(86)193-5757-1847 | Email: 19357571847@163.com"
       },
       "sections": {
