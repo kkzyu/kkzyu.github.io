@@ -1,0 +1,14 @@
+main:
+
+  - title: Systematic sorting and visualization exploration of social media related research for CHI conferences
+    authors: <strong> Jingying Chen</strong>
+    conference: CAD&CG, Mentor--<strong>Yingcai Wu</strong>, 2025.
+    pdf: https://kkzyu.github.io/CHI/#/
+    image: ./assets/img/CHI.png
+
+  - title: Travel Planning Website: Simplifying Travel Planning
+    authors: <strong> Jingying Chen</strong>
+    pdf: https://kkzyu.github.io/TravelPlan/
+    image: ./assets/img/travelplan.png
+    others: Ongoing
+  
