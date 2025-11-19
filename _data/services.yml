@@ -6,9 +6,9 @@ main:
     pdf: https://kkzyu.github.io/CHI/#/
     image: ./assets/img/CHI.png
 
-  - title: Travel Planning Website: Simplifying Travel Planning
+  - title: Travel Planning Website -- Simplifying Travel Planning
     authors: <strong> Jingying Chen</strong>
     pdf: https://kkzyu.github.io/TravelPlan/
     image: ./assets/img/travelplan.png
-    others: Ongoing
+    notes: Ongoing
   
