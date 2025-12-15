@@ -19,11 +19,11 @@ I define myself as <strong>a curious soul with the courage to embrace trial and 
 
 <div style="height: 1em;"></div>
 
-## Research Interests
+<!-- ## Research Interests
 
 - **Data Visualization & Sensemaking 🕸️➡️🧐:**  Designing coordinated multiple-view systems for complex network analysis; Visualizing hierarchical structures to facilitate rapid information retrieval and decision-making.
 
-- **Human-AI Collaboration 🤝➡️📝:** Synergizing generative AI with human verification for fine-grained data annotation; Developing interpretable detection models to enhance user trust in AI-generated content.
+- **Human-AI Collaboration 🤝➡️📝:** Synergizing generative AI with human verification for fine-grained data annotation; Developing interpretable detection models to enhance user trust in AI-generated content. -->
 
 {% include_relative _includes/publications.md %}
 
