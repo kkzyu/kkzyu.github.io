@@ -1,0 +1,578 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>附件04：模型怎样生成分子，我们怎样让比较成立</title><style>*{box-sizing:border-box}body{margin:0;background:#f4f6f9;color:#27384c;font:17px/1.9 "Microsoft YaHei",system-ui,sans-serif}a{color:#225aab;text-decoration:none}a:hover{text-decoration:underline}aside.sidebar{position:fixed;left:0;top:0;bottom:0;width:245px;background:#fff;overflow:auto;padding:24px 18px;border-right:1px solid #dde4ed}.sidebar strong{font-size:19px;display:block;margin-bottom:18px}.sidebar a{display:block;font-size:14px;line-height:1.6;padding:8px}.sidebar .group{font-size:12px;color:#7b8797;margin:18px 8px 5px}main{margin-left:245px;max-width:1320px;min-height:100vh;background:#fff;padding:35px 52px 80px}h1{font-size:29px;line-height:1.5;color:#183856;padding-bottom:18px;border-bottom:3px solid #3979ac}h2{font-size:23px;margin-top:38px;line-height:1.65}h3{font-size:20px;margin-top:32px}p{margin:16px 0}li{margin:9px 0}strong{color:#1c3c57}.term-note{font-size:13.5px;line-height:1.8;color:#667587;margin:16px 0 24px;padding:10px 15px;background:#f6f8fb;border-left:3px solid #c9d7e6}.meta{font-size:12px;line-height:1.8;color:#758194;margin-bottom:12px}.toc{font-size:14px;background:#f7f9fc;padding:12px 20px;margin:20px 0;border:1px solid #e5ebf3;border-radius:6px}.toc ul{list-style:none;padding-left:12px}.toc li{margin:3px}.tablebox{overflow-x:auto;margin:20px 0}table{border-collapse:collapse;font-size:13px;line-height:1.65;min-width:100%;width:max-content}th,td{border:1px solid #dfe6ee;padding:9px 12px;max-width:520px;overflow-wrap:anywhere}th{background:#edf3f9;text-align:left}tr:nth-child(even){background:#fafbfd}details{margin:14px 0 26px;border:1px solid #dce5ee;border-radius:7px;background:#fbfcfe;padding:0 17px 12px}summary{cursor:pointer;font-size:14px;color:#4b6783;line-height:1.7;padding:12px 0}details[open]{background:#fff}details p,details li{font-size:14px;line-height:1.85}details h2,details h3{font-size:18px}details .tablebox{margin:12px 0}code{font:13px Consolas,monospace;background:#f1f4f8;overflow-wrap:anywhere}pre{overflow:auto;padding:15px;background:#f1f4f8}img{max-width:100%;height:auto;border:1px solid #e5eaf1}a[id]{scroll-margin-top:24px}.back{font-size:13px;padding-top:28px;border-top:1px solid #e3e9f0;margin-top:35px}@media(max-width:850px){aside.sidebar{position:relative;width:auto;max-height:260px}main{margin:0;padding:22px}}@media print{aside.sidebar,.toc,.meta{display:none}main{margin:0;padding:0;max-width:none;font-size:11px}details{border:0}details:not([open])>*:not(summary){display:block}table,img{break-inside:avoid}.tablebox{overflow:visible}}</style><style>.web-note{font-size:14px}.tablebox table{font-size:14px}@media(max-width:850px){aside.sidebar{position:sticky;top:0;z-index:20;max-height:none;padding:10px 16px;box-shadow:0 2px 8px #18385615}aside.sidebar strong{font-size:16px;margin:0 0 5px}aside.sidebar .group{display:none}aside.sidebar>a{display:none}aside.sidebar>a[href="index.html"],aside.sidebar>a[href="contents.html"],aside.sidebar>a[href="chapter-08.html"],aside.sidebar>a[href="chapter-10.html"]{display:inline-block;font-size:14px;padding:5px 10px 5px 0}main{padding:18px}table{font-size:14px}h1{font-size:25px}h2{font-size:21px}}</style></head><body><aside class="sidebar"><strong>CrossDocked 汇报</strong><a href="contents.html">阅读入口</a><div class="group">先抓主线</div><a href="index.html">01 · 2—3分钟汇报</a><div class="group">按问题看解释</div><a href="chapter-02.html">02 · 指标怎样读</a><a href="chapter-03.html">03 · 假设与回答</a><a href="chapter-04.html">04 · 模型与比较条件</a><a href="chapter-05.html">05 · 六类比较方法</a><a href="chapter-06.html">06 · 时间线与问题</a><a href="chapter-07.html">07 · 下一步与讨论</a><div class="group">查结果与证据</div><a href="chapter-08.html">08 · 结果与进度</a><a href="chapter-09.html">09 · 数据来源与表格</a><a href="chapter-10.html">10 · 用图讲重点</a><a href="chapter-11.html">11 · 按问题查证据</a><a href="chapter-12.html">12 · 术语与论文</a><a href="chapter-13.html">13 · 论文引用前的问题</a><a href="chapter-14.html">14 · 10月9日补充与依据</a><a href="sources.html">引用与原件索引</a></aside><main><div class="term-note web-note">网页版保留汇报、方法解释、结果表和图表。代码、日志及完整数据原件由汇报者离线保存；引用索引保留文件名与行号。</div><div class="meta">汇报更新：2026年10月9日 · 新增计数截至09:44；旧详细结果截至10月8日10:53</div><div class="toc">
+<ul>
+<li><a href="#04">附件04：模型怎样生成分子，我们怎样让比较成立</a><ul>
+<li><a href="#_1">先建立共同的比较条件</a></li>
+<li><a href="#_2">为什么选这些模型，哪些没有纳入</a></li>
+<li><a href="#targetdiff">TargetDiff权重的替代下载来源</a></li>
+<li><a href="#_3">三种结果要分开看</a></li>
+<li><a href="#targetdiff_1">TargetDiff</a></li>
+<li><a href="#pocket2mol">Pocket2Mol</a></li>
+<li><a href="#molcraft">MolCRAFT</a></li>
+<li><a href="#drugflowood">DrugFlow（含OOD检查点）</a></li>
+<li><a href="#flexflow">FlexFlow</a></li>
+<li><a href="#decompdiff">DecompDiff</a></li>
+<li><a href="#_4">为什么要统一对接，而不直接用模型仓库自带分数</a></li>
+<li><a href="#_5">论文复核所需的完整模型清单</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><a id="workflow"></a></p>
+<h1 id="04">附件04：模型怎样生成分子，我们怎样让比较成立</h1>
+<h2 id="_1">先建立共同的比较条件</h2>
+<p>项目选择的生成模型使用同一训练数据，这是比较的共同起点。但它们读取文件的方式、测试索引、输出格式和自带评分工具并不相同。我们因此没有直接抄各仓库的结果表，而是先把同一个测试口袋对齐，再统一记录每次生成，最后用同一评价方法计算。</p>
+<p>执行顺序是：核对模型文件和数据身份 → 确认环境能运行、权重能正确加载 → 单口袋小样本 → 五口袋测试 → 20口袋试验 → 决定是否扩大到正式测试。每一步先确认前一步的结果能被完整保存和解释。</p>
+<div class="term-note">检查点（checkpoint）是训练后保存的模型权重。环境是运行它需要的软件及版本。测试索引是模型用来指定第几个口袋的编号；不同模型的同一个整数可能对应不同口袋，所以必须先映射到共同身份。</div>
+
+<p><a href="chapter-09.html#dataset">共同数据背景</a>；<a href="chapter-08.html#progress">实际运行进度</a>。</p>
+<p><a id="selection-history"></a></p>
+<h2 id="_2">为什么选这些模型，哪些没有纳入</h2>
+<p>筛选的共同条件是：生成模型所用训练数据符合本项目范围，并有可接入的权重。先核对训练来源，再区分权重是否可得、是否属于本次明确的研究范围。未纳入的原因并不都一样。</p>
+<div class="tablebox"><table>
+<thead>
+<tr>
+<th>初审对象</th>
+<th>当时记录的情况</th>
+<th>本项目怎样处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TargetDiff、Pocket2Mol、DecompDiff、MolCRAFT</td>
+<td>初审认为生成模型训练来源符合或高置信符合；TargetDiff官方权重链接当时失效</td>
+<td>纳入接入范围；实际版本、兼容性和结果类别另外登记</td>
+</tr>
+<tr>
+<td>DrugFlow、DrugFlow-OOD、FlexFlow</td>
+<td>用户确认所选三份权重符合共同训练数据条件</td>
+<td>基础DrugFlow与FlexFlow用于主比较，OOD权重用于诊断</td>
+</tr>
+<tr>
+<td>MolJO</td>
+<td>初审认为训练来源可满足；它组合MolCRAFT生成骨干与属性引导</td>
+<td>用户明确只分析MolCRAFT，MolJO和MolPilot不参与；不是以“使用其他训练集”为由排除</td>
+</tr>
+<tr>
+<td>PIDiff</td>
+<td>初审认为数据来源符合，但当时仓库未发布可用模型权重</td>
+<td>未接入；采样结果文件不能代替训练权重</td>
+</tr>
+<tr>
+<td>分子生成IPDiff</td>
+<td>初审记录其IPNet还在PDBBind v2016上预训练</td>
+<td>不满足整个系统仅使用指定训练数据的严格条件</td>
+</tr>
+<tr>
+<td>SeFMol</td>
+<td>初审记录使用Molecule3D预训练，再在CrossDocked上微调和强化学习</td>
+<td>不满足本次严格条件</td>
+</tr>
+<tr>
+<td>DrugFlow-PA</td>
+<td>增加模型生成、评分得到的偏好训练数据</td>
+<td>不纳入本次基础模型比较</td>
+</tr>
+<tr>
+<td>最初提供的MathLee/IPDiff链接</td>
+<td>指向同名的遥感项目</td>
+<td>不是本任务的分子生成模型</td>
+</tr>
+</tbody>
+</table></div>
+<div class="term-note">上表记录的是2026-09-29的仓库初审与10-03的用户范围决定，本次没有刷新外部仓库。论文排除理由应对应具体代码版本和权重，不能泛指整个模型家族。历史初审中的MolCRAFT公开权重也不等于后来匹配的last.ckpt。</div>
+
+<details>
+<summary>查看本次补充的记录与依据</summary>
+<p><a href="sources.html#ref-c47ad100021b64">T2 · 2026-09-29 12:39 · M008</a>；<a href="sources.html#ref-3397b48d888caf">T2 · 2026-09-29 12:39 · M008</a>；<a href="sources.html#ref-07390cb85c3584">T6 · 2026-10-03 10:00 · M011</a>。</p>
+</details>
+<p><a id="weight-origin"></a></p>
+<h2 id="targetdiff">TargetDiff权重的替代下载来源</h2>
+<p>10月3日的用户消息记录：官方权重下载链接失效后，使用<a href="https://zenodo.org/records/14041881">Zenodo记录14041881</a>下载TargetDiff权重。这里说明的是模型权重来源；前文“改用DecompDiff”说的是数据集来源，两者需要分别记录。</p>
+<p>当前已保存权重的路径及文件指纹见本附件的<a href="#ledger">完整模型清单</a>。下载日期未在该消息中精确注明，不能把消息日期当下载日期。该历史记录也不代表本轮已确认外部链接仍可用。</p>
+<details>
+<summary>查看本次补充的记录与依据</summary>
+<p><a href="sources.html#ref-e952689a46d2ea">T2 · 2026-09-29 12:39 · M008</a>；<a href="sources.html#ref-07390cb85c3584">T6 · 2026-10-03 10:00 · M011</a>。</p>
+</details>
+<p><a id="tracks"></a></p>
+<h2 id="_3">三种结果要分开看</h2>
+<div class="tablebox"><table>
+<thead>
+<tr>
+<th>结果类别</th>
+<th>模型提前知道什么</th>
+<th>本项目怎样用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主比较</td>
+<td>知道登记的蛋白位点，但不提供参考配体的原子数或分解答案</td>
+<td>TargetDiff-prior、Pocket2Mol、DrugFlow、FlexFlow；匹配MolCRAFT-prior作为后续候选</td>
+</tr>
+<tr>
+<td>参考信息辅助的结果</td>
+<td>还知道参考配体的大小或分解信息</td>
+<td>MolCRAFT-ref、DecompDiff-ref单列，用来了解额外信息的作用</td>
+</tr>
+<tr>
+<td>诊断结果</td>
+<td>使用特定检查点或来源独立性尚未证明的先验</td>
+<td>DrugFlow-OOD、DecompDiff-beta用于机制/兼容性检查，暂不混进主排名</td>
+</tr>
+</tbody>
+</table></div>
+<p>主比较也不是“从完整蛋白中独立寻找结合位点”：这些模型仍使用参考位点定义的输入范围，统一对接盒子的中心也根据登记参考配体确定。三个类别对应原表的blind、oracle和diagnostic。</p>
+<details>
+<summary>查看测量结果和计算代码</summary>
+<p><a href="sources.html#ref-e270b59688e958">targetdiff_prior.yaml 第 9 行</a>；<a href="sources.html#ref-5835e972af856d">decompdiff.yaml 第 12 行</a>；<a href="sources.html#ref-0614d17c486a07">decompdiff_beta_diagnostic.yaml 第 10 行</a>。</p>
+</details>
+<p><a id="targetdiff"></a></p>
+<h2 id="targetdiff_1">TargetDiff</h2>
+<p><strong>它怎样生成：</strong> 先放一批杂乱的原子位置和元素类型，再反复修正，使它们适合给定蛋白口袋。这是逐步去噪的生成方式。最后还要根据位置和元素重建化学键。</p>
+<p><strong>当前关键设置：</strong> 生成前从口袋大小先验决定原子数量；本项目设置1000次去噪，原子类型和坐标都生成。</p>
+<p><strong>为什么可能影响取舍：</strong> 更大的原子数可能带来更多接触，也会改变药物性质；更多去噪步骤增加成本，最终重建可能失败。因此不能把评分优势直接归结为网络更懂结合。</p>
+<p><strong>为本任务做的适配：</strong> 为每个任务建立只读数据链接，把上游坐标/元素结果转换为统一分子文件，记录每次重建失败，并监测实际采样进程显存。</p>
+<details>
+<summary>查看测量结果和计算代码</summary>
+<p><a href="sources.html#ref-91dfa9ce1359fb">执行与配置代码</a>；<a href="sources.html#ref-e41b65899bf548">登记的模型设置</a>。</p>
+</details>
+<details>
+<summary>查看模型原论文</summary>
+<p><a href="https://arxiv.org/abs/2303.03543">作者原始论文</a>。这里用于解释主要机制，论文发表数值没有当成本项目结果。</p>
+</details>
+<p><a id="pocket2mol"></a></p>
+<h2 id="pocket2mol">Pocket2Mol</h2>
+<p><strong>它怎样生成：</strong> 从已有上下文开始，一颗一颗添加原子。每步决定从哪里继续生长、新原子的位置和元素、以及与已有原子的键；条件不满足时停止。</p>
+<p><strong>当前关键设置：</strong> 本项目保留最多300条生长候选路径、最多50个生长步骤，并固定位置、元素、成键等选择阈值。官方配置的候选宽度是500，两者不能说成完全相同。</p>
+<p><strong>为什么可能影响取舍：</strong> 生长与停止规则会影响分子大小、能否完整生成和运算量。五口袋测试分子偏小值得检查这些设置，但仅凭偏小现象还不能确定是哪一项规则造成的。</p>
+<p><strong>为本任务做的适配：</strong> 兼容旧的软件导入路径；由参考配体位置固定23Å区域。若一次产生超出预算的分子，按原生成顺序取前面一段，不按高分挑选。新任务去掉冗余中间快照，保留最终池、结构和日志。</p>
+<details>
+<summary>查看测量结果和计算代码</summary>
+<p><a href="sources.html#ref-fdc9acb133e6fa">执行与配置代码</a>；<a href="sources.html#ref-06ff094afd174f">登记的模型设置</a>。</p>
+</details>
+<details>
+<summary>查看模型原论文</summary>
+<p><a href="https://proceedings.mlr.press/v162/peng22b/peng22b.pdf">作者原始论文</a>。这里用于解释主要机制，论文发表数值没有当成本项目结果。</p>
+</details>
+<p><a id="molcraft"></a></p>
+<h2 id="molcraft">MolCRAFT</h2>
+<p><strong>它怎样生成：</strong> 反复更新对原子位置和元素类型的概率判断：位置和元素类别都用连续参数表达，一起推断。最后根据得到的位置和类型重建分子。</p>
+<p><strong>当前关键设置：</strong> 当前匹配版本用100个采样步骤。prior设置根据口袋先验取大小；ref设置直接使用参考配体原子数。</p>
+<p><strong>为什么可能影响取舍：</strong> 采样步数影响成本；大小模式会改变生成规模和参考信息。两个模式的性质差异不能直接当成同一个机制的因果效应。</p>
+<p><strong>为本任务做的适配：</strong> 原公开权重与构造代码输入维度不匹配，后来使用匹配的jpan源码和last.ckpt。另修复NumPy旧名称和软件回调接口，只导出模型原始分子，不调用上游评分。新增产物的来源字段仍有旧标签，详见附件13。</p>
+<details>
+<summary>查看测量结果和计算代码</summary>
+<p><a href="sources.html#ref-fee360ab95907a">执行与配置代码</a>；<a href="sources.html#ref-9fafa6732ef699">登记的模型设置</a>。</p>
+</details>
+<details>
+<summary>查看模型原论文</summary>
+<p><a href="https://arxiv.org/abs/2404.12141">作者原始论文</a>。这里用于解释主要机制，论文发表数值没有当成本项目结果。</p>
+</details>
+<p><a id="drugflow"></a></p>
+<h2 id="drugflowood">DrugFlow（含OOD检查点）</h2>
+<p><strong>它怎样生成：</strong> 让原子位置连续移动，同时更新元素和化学键的离散类别，逐步形成口袋内的分子。大小由条件分布决定，并使用可以被去掉的虚拟节点来处理原子数量。</p>
+<p><strong>当前关键设置：</strong> 本项目禁止使用真实配体大小，调用时不指定答案原子数，主要采样设置从检查点读取。OOD是另一份用于诊断的权重，不是一个完全不同的生成方法。</p>
+<p><strong>为什么可能影响取舍：</strong> 大小规则和原子—键共同生成会影响有效率、接触和性质。程序支持的不确定性输出还没有在本项目完成系统分析；不能因使用OOD检查点就声称已验证了分布外识别。</p>
+<p><strong>为本任务做的适配：</strong> 固定独立软件环境，修复缺失的软件依赖；用登记测试索引读取输入；每次保存分子和相应受体。原仓库的局部评分不进入统一主结果。</p>
+<details>
+<summary>查看测量结果和计算代码</summary>
+<p><a href="sources.html#ref-b5a4e4b5d13b96">执行与配置代码</a>；<a href="sources.html#ref-6f925f940de952">登记的模型设置</a>。</p>
+</details>
+<details>
+<summary>查看模型原论文</summary>
+<p><a href="https://arxiv.org/abs/2508.17815">作者原始论文</a>。这里用于解释主要机制，论文发表数值没有当成本项目结果。</p>
+</details>
+<p><a id="flexflow"></a></p>
+<h2 id="flexflow">FlexFlow</h2>
+<p><strong>它怎样生成：</strong> 在DrugFlow生成分子的同时，也调整蛋白侧链的空间状态，让局部蛋白可以配合分子变化。</p>
+<p><strong>当前关键设置：</strong> 跨模型主结果仍在共同的原始受体上计算；模型生成的受体另作诊断。</p>
+<p><strong>为什么可能影响取舍：</strong> 柔性有可能改善互补，但在自己调整的受体上获得高分，与在共享受体上高分是两种结论。把两种评分分开，才不会给某个模型额外优势。</p>
+<p><strong>为本任务做的适配：</strong> 与DrugFlow共用隔离环境；保存生成受体，分别保留统一原始受体评分和生成受体诊断评分。后者不覆盖前者。</p>
+<details>
+<summary>查看测量结果和计算代码</summary>
+<p><a href="sources.html#ref-e4c68fa27e9b33">执行与配置代码</a>；<a href="sources.html#ref-6b7cdb0b8b18e6">登记的模型设置</a>。</p>
+</details>
+<details>
+<summary>查看模型原论文</summary>
+<p><a href="https://arxiv.org/abs/2508.17815">作者原始论文</a>。这里用于解释主要机制，论文发表数值没有当成本项目结果。</p>
+</details>
+<p><a id="decompdiff"></a></p>
+<h2 id="decompdiff">DecompDiff</h2>
+<p><strong>它怎样生成：</strong> 先把配体分成伸向局部结合区域的分支和连接它们的骨架，给不同部分位置和大小线索。然后共同生成原子与键，并用额外规则减少挤碰、保持分支连接。</p>
+<p><strong>当前关键设置：</strong> 继承1000步采样和分支连接/碰撞引导。ref使用参考配体分解与大小；beta资源已找到，但是否独立于参考答案仍未证明。</p>
+<p><strong>为什么可能影响取舍：</strong> 分支数、原子数和位置先验会影响接触与生成规模。如果线索来自真实配体，就不能与没有这份答案信息的模型混排。引导强度也可能在结构合理性和其他性质之间产生取舍。</p>
+<p><strong>为本任务做的适配：</strong> 用只读链接建立上游需要的数据目录，保留原始输出并导出已经重建的分子。beta使用v2采样分支，保持诊断类别；正式先验干预还未完成。</p>
+<details>
+<summary>查看测量结果和计算代码</summary>
+<p><a href="sources.html#ref-50647bde31f7b0">执行与配置代码</a>；<a href="sources.html#ref-351983ec791601">登记的模型设置</a>。</p>
+</details>
+<details>
+<summary>查看模型原论文</summary>
+<p><a href="https://proceedings.mlr.press/v202/guan23a.html">作者原始论文</a>。这里用于解释主要机制，论文发表数值没有当成本项目结果。</p>
+</details>
+<p><a id="docking"></a></p>
+<h2 id="_4">为什么要统一对接，而不直接用模型仓库自带分数</h2>
+<p>不同仓库对蛋白补原子、加氢、搜索范围和搜索方式的处理不同。有的只是把已有位置局部调整，有的从更大范围搜索；同样叫Vina分数，也不一定在测同一件事。</p>
+<p>本项目统一使用登记的原始受体、参考位点中心的23Å立方搜索盒、同一准备方式和Vina 1.2.7。固定随机种子、搜索充分程度、候选姿态数和超时规则，取Vina排名第一的姿态。模型的二维性质仍在它原样输出的分子上测，准备对接时加的氢不反过来改变这些分数。</p>
+<p>目前已经确认文件准备、坐标导出和程序运行的技术完整性。要进一步确认搜索是否能找回真实结合位置，还需要同一晶体复合物中的蛋白—配体对照；要确认目标适配，还需要合理的错配口袋对照。这两种验证没有被技术成功替代。</p>
+<div class="term-note">姿态指同一分子在蛋白附近的位置与形状。Vina的exhaustiveness控制搜索投入；本项目为16，最多保存9种姿态，每分子900秒超时、4CPU。去水和单原子离子等准备规则可能影响金属位点，下一步需讨论如何评价这类口袋。</div>
+
+<details>
+<summary>查看测量结果和计算代码</summary>
+<p><a href="sources.html#ref-2b42719a367276">vina_generated_v3.yaml 第 1 行</a>；<a href="sources.html#ref-a7d24b2dbb8af8">upstream_docking_implementation_audit.md 第 5 行</a>；<a href="sources.html#ref-f3c33eec138e25">stage1_docking_protocol_v3_20261006.yaml 第 7 行</a>。</p>
+</details>
+<p><a id="ledger"></a></p>
+<h2 id="_5">论文复核所需的完整模型清单</h2>
+<p>理解方法先看上面的模型说明；要找文件路径、校验值、参数量和环境版本，再展开这些表。旧MolCRAFT清单对应原公开版本，新匹配版本必须另外登记，不能拿旧表给新结果贴标签。</p>
+<details>
+<summary>原七个模型权重文件</summary>
+<div class="tablebox"><table>
+<thead>
+<tr>
+<th>模型家族</th>
+<th>变体</th>
+<th>比较轨道</th>
+<th>路径</th>
+<th>字节数</th>
+<th>修改时间ns</th>
+<th>期望MD5</th>
+<th>观察MD5</th>
+<th>MD5状态</th>
+<th>SHA256</th>
+<th>纳入清单</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>decompdiff</td>
+<td>uni_o2_bond</td>
+<td>blind_candidate</td>
+<td>[项目目录]/model/DecompDiff-main/uni_o2_bond.pt</td>
+<td>60532413</td>
+<td>1790932282615935110</td>
+<td>475c6991f118f940e4996be9dc240516</td>
+<td>475c6991f118f940e4996be9dc240516</td>
+<td>MATCH</td>
+<td>9d3daf75ff37fbc314f2dd43f899c7c104a8f68992cad5c0e8446574fac39c17</td>
+<td>True</td>
+</tr>
+<tr>
+<td>targetdiff</td>
+<td>pretrained_diffusion</td>
+<td>blind</td>
+<td>[项目目录]/model/targetdiff-main/ckpt/pretrained_diffusion.pt</td>
+<td>33092213</td>
+<td>1790932127679282893</td>
+<td>1baa2b1bd714734da1eb2763cb65e92d</td>
+<td>1baa2b1bd714734da1eb2763cb65e92d</td>
+<td>MATCH</td>
+<td>8977821339ba31b7103b46835ef4ddbf7f15f3f2efc5cb1f2a405e7905b09db6</td>
+<td>True</td>
+</tr>
+<tr>
+<td>pocket2mol</td>
+<td>pretrained_pocket2mol</td>
+<td>blind</td>
+<td>[项目目录]/model/Pocket2Mol-main/pretrained_Pocket2Mol.pt</td>
+<td>44921289</td>
+<td>1790932206238461256</td>
+<td>e03beed39bbae754c2d9d41646d7d082</td>
+<td>e03beed39bbae754c2d9d41646d7d082</td>
+<td>MATCH</td>
+<td>e9d8152dfdf034dabf48e566904e9d7c6cc1b96843bdc4d0026d891678913911</td>
+<td>True</td>
+</tr>
+<tr>
+<td>molcraft</td>
+<td>epoch26</td>
+<td>blind_and_oracle</td>
+<td>[项目目录]/model/MolCRAFT-master/molcraft_epoch26-val_loss5.96-mol_stable0.95-complete0.97.ckpt</td>
+<td>44543296</td>
+<td>1790932226925699904</td>
+<td>4507f0f790dc059b27cc39930b65de83</td>
+<td>4507f0f790dc059b27cc39930b65de83</td>
+<td>MATCH</td>
+<td>0a54f9bfb847ea87e7aec538df90a009c8c49d12a7b5d09947d04b7f9444e024</td>
+<td>True</td>
+</tr>
+<tr>
+<td>drugflow</td>
+<td>drugflow</td>
+<td>blind</td>
+<td>[项目目录]/model/DrugFlow-main/drugflow.ckpt</td>
+<td>168386242</td>
+<td>1790933124403638039</td>
+<td>ea31c4b687306445a19179df85050309</td>
+<td>ea31c4b687306445a19179df85050309</td>
+<td>MATCH</td>
+<td>60d1ff4e4f73198ec74f895579ae44a1e3bb648346c2b502889d449185e87572</td>
+<td>True</td>
+</tr>
+<tr>
+<td>drugflow</td>
+<td>drugflow_ood</td>
+<td>diagnostic</td>
+<td>[项目目录]/model/DrugFlow-main/drugflow_ood.ckpt</td>
+<td>168423274</td>
+<td>1790933124485915581</td>
+<td>621d981a28ecaad8a4cf48a86bb2d12e</td>
+<td>621d981a28ecaad8a4cf48a86bb2d12e</td>
+<td>MATCH</td>
+<td>575869d3a49d1a38a2069a61cbfb009496eb89816c1b7e6a6ded0b5a182cb1e1</td>
+<td>True</td>
+</tr>
+<tr>
+<td>flexflow</td>
+<td>flexflow</td>
+<td>blind</td>
+<td>[项目目录]/model/DrugFlow-main/flexflow.ckpt</td>
+<td>191462986</td>
+<td>1790933153682110873</td>
+<td>90b03d308566265208c6673ec383ffc9</td>
+<td>90b03d308566265208c6673ec383ffc9</td>
+<td>MATCH</td>
+<td>803386e790764bb2fb3482d112e4908e3d8563117ec99deb2e21ff7dd2ecdb16</td>
+<td>True</td>
+</tr>
+</tbody>
+</table></div>
+</details>
+<details>
+<summary>构造模型的参数量</summary>
+<div class="tablebox"><table>
+<thead>
+<tr>
+<th>模型/检查点</th>
+<th style="text-align: right;">构造模型参数量</th>
+<th>意义与来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>targetdiff</td>
+<td style="text-align: right;">2,839,692</td>
+<td>CPU严格加载记录；<a href="sources.html#ref-d0b37e06c15591">targetdiff.json 第 41 行</a></td>
+</tr>
+<tr>
+<td>pocket2mol</td>
+<td style="text-align: right;">3,711,167</td>
+<td>CPU严格加载记录；<a href="sources.html#ref-eec34b02fa1467">pocket2mol.json 第 27 行</a></td>
+</tr>
+<tr>
+<td>drugflow</td>
+<td style="text-align: right;">12,101,903</td>
+<td>CPU严格加载记录；<a href="sources.html#ref-8995a951aa8122">drugflow.json 第 72 行</a></td>
+</tr>
+<tr>
+<td>drugflow_ood</td>
+<td style="text-align: right;">12,102,705</td>
+<td>CPU严格加载记录；<a href="sources.html#ref-9b7cf8227a019e">drugflow_ood.json 第 72 行</a></td>
+</tr>
+<tr>
+<td>flexflow</td>
+<td style="text-align: right;">12,639,316</td>
+<td>CPU严格加载记录；<a href="sources.html#ref-326af52c9c26a1">flexflow.json 第 70 行</a></td>
+</tr>
+<tr>
+<td>decompdiff</td>
+<td style="text-align: right;">4,995,282</td>
+<td>CPU严格加载记录；<a href="sources.html#ref-493ebd85fd3880">decompdiff.json 第 41 行</a></td>
+</tr>
+<tr>
+<td>匹配MolCRAFT last.ckpt</td>
+<td style="text-align: right;">2,824,819</td>
+<td>A40严格加载记录；<a href="sources.html#ref-a0e6b0dcb0f7d3">molcraft_strict_probe.json 第 90 行</a></td>
+</tr>
+</tbody>
+</table></div>
+</details>
+<details>
+<summary>数据文件与身份清单</summary>
+<div class="tablebox"><table>
+<thead>
+<tr>
+<th>dataset_id</th>
+<th>purpose</th>
+<th>路径</th>
+<th>字节数</th>
+<th>修改时间ns</th>
+<th>md5</th>
+<th>SHA256</th>
+<th>期望MD5</th>
+<th>checksum_status</th>
+<th>access_mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>official_crossdocked_archive</td>
+<td>official_outer_zip</td>
+<td>[项目目录]/data/crossdocked/data-20260929T073604Z-1-002.zip</td>
+<td>15551571</td>
+<td>1790673921690356433</td>
+<td>1caa815fc5a686e5a950b061ed77a06b</td>
+<td>4b353546232688244304981098f4b23968353e8c27cf1da90708cecbbd352dd9</td>
+<td>NA</td>
+<td>RECORDED</td>
+<td>read_only</td>
+</tr>
+<tr>
+<td>decompdiff_crossdocked_lmdb</td>
+<td>decompdiff_preprocessing</td>
+<td>[项目目录]/data/crossdocked/crossdocked_v1.1_rmsd1.0_processed_full_ref_prior_aromatic-001.lmdb</td>
+<td>2985099264</td>
+<td>1790675419818266908</td>
+<td>05f4ba1055a818cfa509f8c8c96e7849</td>
+<td>a229fd91dd1a53c8f8ad47aec214f46479ec2393595fd4ba632b34822ef25e22</td>
+<td>NA</td>
+<td>RECORDED</td>
+<td>read_only</td>
+</tr>
+<tr>
+<td>targetdiff_molcraft_crossdocked_lmdb</td>
+<td>targetdiff_molcraft_preprocessing</td>
+<td>[项目目录]/jpan/targetdiff_jpan/targetdiff/data/crossdocked_v1.1_rmsd1.0_pocket10_processed_final.lmdb</td>
+<td>4056125440</td>
+<td>1664078866000000000</td>
+<td>e8b74b9ba00d7de399327a3b02bb41d3</td>
+<td>376679dd1516e855f1cdd89bef2e25995958b77695cd63a88a26ec02a1d3b591</td>
+<td>NA</td>
+<td>RECORDED</td>
+<td>read_only</td>
+</tr>
+<tr>
+<td>targetdiff_molcraft_pose_split</td>
+<td>targetdiff_molcraft_test_split</td>
+<td>[项目目录]/jpan/targetdiff_jpan/targetdiff/data/crossdocked_pocket10_pose_split.pt</td>
+<td>425199</td>
+<td>1677879413000000000</td>
+<td>420d58ab3b1d6209f1c7fcae8a122499</td>
+<td>fc2e32512985e1f01f70b95ca58c0f5abf1ab0a6a7985cabcfedd969ac730bc4</td>
+<td>NA</td>
+<td>RECORDED</td>
+<td>read_only</td>
+</tr>
+<tr>
+<td>drugflow_processed_crossdocked</td>
+<td>drugflow_flexflow_preprocessing</td>
+<td>[项目目录]/model/DrugFlow-main/processed_crossdocked.zip</td>
+<td>1259508927</td>
+<td>1791014085690911894</td>
+<td>b0dd8b22a2ecc09b291acfad5d23f2ac</td>
+<td>eb5ca3e750ef5220a788c6481cf9319f0339ab253408959a92078b62e0f5de6b</td>
+<td>b0dd8b22a2ecc09b291acfad5d23f2ac</td>
+<td>MATCH</td>
+<td>read_only</td>
+</tr>
+</tbody>
+</table></div>
+</details>
+<details>
+<summary>软件环境登记</summary>
+<div class="tablebox"><table>
+<thead>
+<tr>
+<th>环境ID</th>
+<th>prefix</th>
+<th>environment_hash</th>
+<th>python</th>
+<th>torch</th>
+<th>torch_compiled_cuda</th>
+<th>torch_geometric</th>
+<th>rdkit</th>
+<th>pytorch_lightning</th>
+<th>openbabel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>env_decompdiff</td>
+<td>[项目目录]/anaconda3/envs/decompdiff_py310</td>
+<td>1ec52e37d07f3f600fc2cfd2a509e94d15cb0c25fbe861893f4957161a63c550</td>
+<td>3.10.20 (main, Jun 11 2026, 15:17:37) [GCC 14.3.0]</td>
+<td>2.5.1+cu118</td>
+<td>11.8000</td>
+<td>2.6.1</td>
+<td>2026.03.3</td>
+<td>2.0.8</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>env_targetdiff</td>
+<td>[项目目录]/anaconda3/envs/env_targetdiff</td>
+<td>921fc76f6b4c6176ec7d40805584a2794e968951a108c5d7263683be1b06b4f8</td>
+<td>3.10.20 (main, Jun 11 2026, 15:17:37) [GCC 14.3.0]</td>
+<td>2.5.1+cu118</td>
+<td>11.8000</td>
+<td>2.6.1</td>
+<td>2026.03.3</td>
+<td>2.0.8</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>env_pocket2mol</td>
+<td>[项目目录]/anaconda3/envs/env_pocket2mol</td>
+<td>4a32acc4d842c2001bc3717c94b19db57d4536b237eb6ab88e1b5ee7e330a907</td>
+<td>3.10.20 (main, Jun 11 2026, 15:17:37) [GCC 14.3.0]</td>
+<td>2.5.1+cu118</td>
+<td>11.8000</td>
+<td>2.6.1</td>
+<td>2026.03.3</td>
+<td>2.0.8</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>env_molcraft</td>
+<td>[项目目录]/anaconda3/envs/env_molcraft_stage1_exact</td>
+<td>67c30b29f805ea85964b299d17760e1e8e58b00392b47fdc291723922a29c493</td>
+<td>3.9.25 (main, Nov  3 2025, 22:33:05) <br>[GCC 11.2.0]</td>
+<td>1.12.0+cu116</td>
+<td>11.6000</td>
+<td>2.1.0</td>
+<td>2025.03.5</td>
+<td>1.9.5</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>env_drugflow</td>
+<td>[项目目录]/anaconda3/envs/env_drugflow</td>
+<td>0c4ca5af58853fb1d6bd20a9df79a2c16663408f5fedef148f547c6e8fc41725</td>
+<td>3.11.8 | packaged by conda-forge | (main, Feb 16 2024, 20:53:32) [GCC 12.3.0]</td>
+<td>2.2.1</td>
+<td>12.1000</td>
+<td>2.5.1</td>
+<td>2023.09.6</td>
+<td>2.2.1</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>env_benchmark_eval</td>
+<td>[项目目录]/anaconda3/envs/molgenbench_eval</td>
+<td>6c2e86f5a1e7b9f3c2108bb885c6b76634f18fb743309d414583a00bc8cfd289</td>
+<td>3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]</td>
+<td>2.8.0+cu128</td>
+<td>12.8000</td>
+<td>NA</td>
+<td>2023.09.6</td>
+<td>NA</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>env_docking</td>
+<td>[项目目录]/anaconda3/envs/env_docking</td>
+<td>ff3e2fcf406e4bf5fd805bbd77e4b07354c3a716f480464690823a5498d3c78d</td>
+<td>3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>2026.03.1</td>
+<td>NA</td>
+<td>3.2.1</td>
+</tr>
+</tbody>
+</table></div>
+</details>
+<details>
+<summary>匹配版MolCRAFT及环境变化的详细证据</summary>
+<p><a href="sources.html#ref-d5d696aa3d0acd">stage1_candidate_models_20261006.yaml 第 6 行</a>；<a href="sources.html#ref-510cca6d017427">molcraft_strict_probe.json 第 83 行</a>；<a href="sources.html#ref-26d04eaef65679">runtime.json 第 1 行</a>；<a href="sources.html#ref-5779abcf44890c">environment_audit.md 第 26 行</a>。</p>
+</details><div class="back"><a href="index.html">回到汇报主线</a> · <a href="contents.html">回到目录</a></div></main></body></html>
