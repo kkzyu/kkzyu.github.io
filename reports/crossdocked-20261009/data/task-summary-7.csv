@@ -1,0 +1,5 @@
+﻿canonical_pocket_id,full_models,seeds_per_model,attempted,dockable_then_receptor_failure,native_failure,p0,error_message,sample_source_file,sample_attempt_id
+cdtest-077,4,3,1200,1059,141,0,"Exception: Multiple non-identical matching templates found for residue 112 (CYS): CYM, CYX.",1268_attempts.csv,0
+cdtest-081,4,3,1200,956,244,0,"Exception: Multiple non-identical matching templates found for residue 190 (CYS): CYM, CYX.",1274_attempts.csv,1
+cdtest-083,4,3,1200,954,246,0,"Exception: Multiple non-identical matching templates found for residue 157 (CYS): CYM, CYX.",1558_attempts.csv,0
+cdtest-099,4,3,1200,1106,94,0,"Exception: Multiple non-identical matching templates found for residue 268 (CYS): CYM, CYX.",1482_attempts.csv,1
